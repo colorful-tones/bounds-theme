@@ -1,0 +1,75 @@
+/*
+Theme Name: Bounds
+Theme URI: 
+Author: 
+Author URI: 
+Description: 
+Requires at least: 6.0
+Tested up to: 6.3.1
+Requires PHP: 5.7
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: bounds
+Tags: full-site-editing, 
+*/
+
+html {
+	scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	* {
+		scroll-behavior: auto !important;
+	}
+}
+
+@media screen and (min-width: 120ch) {
+	.wp-block-video video {
+		max-height: 65vh;
+	}
+
+	.entry-content,
+	.wp-site-blocks {
+		height: calc(100vh - env(safe-area-inset-bottom, 6vh));
+		overflow-x: hidden;
+		overflow-y: auto;
+		scroll-snap-type: y mandatory;
+		width: 100vw;
+	}
+
+	.entry-content :where(.is-style-slide),
+	.wp-site-blocks :where(.is-style-slide) {
+		min-height: calc(100vh - env(safe-area-inset-bottom, 2vh)) !important;
+		scroll-snap-align: center;
+		scroll-snap-stop: always;
+	}
+}
+
+.entry-content,
+.wp-site-blocks {
+	counter-reset: slides;
+	position: relative;
+	z-index: 1;
+}
+
+:where(.is-style-slide) {
+	counter-increment: slides;
+}
+
+:where(.is-style-slide)::before {
+	background-color: red;
+	border-radius: 50%;
+	bottom: var(--wp--preset--spacing--30);
+	color: white;
+	content: counter(slides);
+	display: grid;
+	font-size: var(--wp--preset--font-size--small);
+	height: calc(1.5 * var(--wp--preset--font-size--small));
+	left: calc(50% - 0.75 * var(--wp--preset--font-size--small));
+	line-height: 1;
+	place-content: center;
+	position: absolute;
+	width: calc(1.5 * var(--wp--preset--font-size--small));
+	z-index: 5;
+}
