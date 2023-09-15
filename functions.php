@@ -66,24 +66,14 @@ if ( ! function_exists( 'bounds_block_styles' ) ) :
 	 *
 	 */
 	function bounds_block_styles() {
-		$block_styles = array(
-			'core/cover' => array(
-				'slide'     => __( 'Slide', 'bounds' ),
-				'slide-alt' => __( 'Slide Alt', 'bounds' ),
+		register_block_style(
+			'core/cover',
+			array(
+				'inline_style' => ':where(.is-style-slide){min-height:100vh !important;}',
+				'label'        => __( 'Slide', 'bounds' ),
+				'name'         => 'slide',
 			)
 		);
-
-		foreach ( $block_styles as $block => $styles ) {
-			foreach ( $styles as $style_name => $style_label ) {
-				register_block_style(
-					$block,
-					array(
-						'name'  => $style_name,
-						'label' => $style_label,
-					)
-				);
-			}
-		}
 	}
 endif;
 

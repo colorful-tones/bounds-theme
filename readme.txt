@@ -29,3 +29,12 @@ This program is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
+
+This theme bundles the following third-party resources:
+
+Rawpixel
+License : Creative Commons CC0
+License URL:
+https://www.rawpixel.com/image/6326045/
+https://www.rawpixel.com/image/6675240/
+https://www.rawpixel.com/image/6560392/

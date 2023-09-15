@@ -14,24 +14,11 @@ Text Domain: bounds
 Tags: full-site-editing, 
 */
 
-html {
-	scroll-behavior: smooth;
-}
-
-@media (prefers-reduced-motion: reduce) {
-	* {
-		scroll-behavior: auto !important;
-	}
-}
-
 @media screen and (min-width: 120ch) {
-	.wp-block-video video {
-		max-height: 65vh;
-	}
 
 	.entry-content,
 	.wp-site-blocks {
-		height: calc(100vh - env(safe-area-inset-bottom, 6vh));
+		height: calc(100vh - var(--wp--custom--wp-admin-bar));
 		overflow-x: hidden;
 		overflow-y: auto;
 		scroll-snap-type: y mandatory;
@@ -46,6 +33,7 @@ html {
 	}
 }
 
+/** Custom page numbers with pseudo elements */
 .entry-content,
 .wp-site-blocks {
 	counter-reset: slides;
@@ -58,10 +46,10 @@ html {
 }
 
 :where(.is-style-slide)::before {
-	background-color: red;
+	background: color-mix(in lab, var(--wp--custom--slide-number--color--background), white);
 	border-radius: 50%;
-	bottom: var(--wp--preset--spacing--30);
-	color: white;
+	bottom: var(--wp--preset--spacing--10);
+	color: var(--wp--custom--slide-number--color--text);
 	content: counter(slides);
 	display: grid;
 	font-size: var(--wp--preset--font-size--small);
