@@ -1,23 +1,24 @@
 === Bounds ===
-Contributors: 
+Contributors: colorful-tones
 Requires at least: 6.0
-Tested up to: 6.3.1
+Tested up to: 6.3
 Requires PHP: 5.7
+Stable tag: 0.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-
+Create your next slide deck with Bounds, a WordPress theme with scroll snapping. 
 
 == Changelog ==
 
-= 1.0.0 =
+= 0.0.2 =
 * Initial release
 
 == Copyright ==
 
-Bounds WordPress Theme, (C) 2023 
+Bounds WordPress Theme, (C) 2023
 Bounds is distributed under the terms of the GNU GPL.
 
 This program is free software: you can redistribute it and/or modify
@@ -35,6 +36,9 @@ This theme bundles the following third-party resources:
 Rawpixel
 License : Creative Commons CC0
 License URL:
-https://www.rawpixel.com/image/6326045/
-https://www.rawpixel.com/image/6675240/
-https://www.rawpixel.com/image/6560392/
+"Fencer" - CC0
+https://www.rawpixel.com/image/9084949
+
+Featured in the theme screenshot:
+"iPod music player png hand drawn sticker, transparent background" - CC0
+https://www.rawpixel.com/image/6326045

@@ -1,39 +1,36 @@
 /*
 Theme Name: Bounds
-Theme URI: 
-Author: 
-Author URI: 
-Description: 
+Theme URI: https://github.com/colorful-tones/bounds-theme/
+Author: Damon Cook
+Author URI: https://profiles.wordpress.org/colorful-tones
+Description: This theme is meant for slide decks. Use it for your next presentation. The default experience includes scroll snapping on large screens. There is also a style variation for a horizontal scroll snapping.
 Requires at least: 6.0
-Tested up to: 6.3.1
+Tested up to: 6.3
 Requires PHP: 5.7
-Version: 1.0.0
+Version: 0.0.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: bounds
-Tags: full-site-editing, 
+Tags: block-patterns, custom-colors, full-site-editing, rtl-language-support, translation-ready, two-columns, wide-blocks
 */
 
-@media screen and (min-width: 120ch) {
+/* Enable smooth scrolling, but defer to user preference */
+html {
+	scroll-behavior: smooth;
+}
 
-	.entry-content,
-	.wp-site-blocks {
-		height: calc(100vh - var(--wp--custom--wp-admin-bar));
-		overflow-x: hidden;
-		overflow-y: auto;
-		scroll-snap-type: y mandatory;
-		width: 100vw;
-	}
-
-	.entry-content :where(.is-style-slide),
-	.wp-site-blocks :where(.is-style-slide) {
-		min-height: calc(100vh - env(safe-area-inset-bottom, 2vh)) !important;
-		scroll-snap-align: center;
-		scroll-snap-stop: always;
+@media (prefers-reduced-motion: reduce) {
+	* {
+		scroll-behavior: auto !important;
 	}
 }
 
-/** Custom page numbers with pseudo elements */
+/* Avoid vertical overflow for large images */
+:where(.wp-block-image) {
+	max-height: 70vh;
+}
+
+/* Custom page numbers with pseudo elements */
 .entry-content,
 .wp-site-blocks {
 	counter-reset: slides;
@@ -53,6 +50,7 @@ Tags: full-site-editing,
 	content: counter(slides);
 	display: grid;
 	font-size: var(--wp--preset--font-size--small);
+	font-weight: 300;
 	height: calc(1.5 * var(--wp--preset--font-size--small));
 	left: calc(50% - 0.75 * var(--wp--preset--font-size--small));
 	line-height: 1;
@@ -60,4 +58,52 @@ Tags: full-site-editing,
 	position: absolute;
 	width: calc(1.5 * var(--wp--preset--font-size--small));
 	z-index: 5;
+}
+
+@media screen and (min-width: 120ch) {
+
+	.is-style-variation-default .entry-content,
+	.is-style-variation-default .wp-site-blocks {
+		height: calc(100vh - var(--wp--custom--wp-admin-bar));
+		overflow-x: hidden;
+		overflow-y: auto;
+		scroll-snap-type: y mandatory;
+		width: 100vw;
+	}
+
+	:where(.is-style-slide) {
+		height: 100%;
+		margin-block-start: 0;
+		scroll-snap-align: start;
+		scroll-snap-stop: always;
+		width: 100vw;
+	}
+
+	/* Horizontal variation */
+	.is-style-variation-horizontal .entry-content,
+	.is-style-variation-horizontal .wp-site-blocks {
+		display: flex;
+		height: 100vh;
+		min-height: 98vh;
+		overflow-x: auto;
+		overflow-y: hidden;
+		scroll-snap-type: x mandatory;
+	}
+
+	.is-style-variation-horizontal .entry-content .wp-block-cover,
+	.is-style-variation-horizontal .wp-site-blocks .wp-block-cover {
+		flex-shrink: 0;
+	}
+
+}
+
+/* Remove some 100vh on smaller screens */
+@media screen and (max-width: 120ch) {
+	:where(.is-style-slide) {
+		border-bottom: 1px dashed color-mix(in lab, var(--wp--custom--slide-number--color--background), white);
+	}
+
+	:where(.is-style-slide .wp-block-group[style*="min-height"]) {
+		min-height: 80vh !important;
+	}
 }
