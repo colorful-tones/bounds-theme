@@ -42,3 +42,16 @@ https://www.rawpixel.com/image/9084949
 Featured in the theme screenshot:
 "iPod music player png hand drawn sticker, transparent background" - CC0
 https://www.rawpixel.com/image/6326045
+
+Fonts
+Commissioner
+License : Open Font License
+https://github.com/kosbarts/Commissioner
+
+Montagu Slab by Florian Karsten
+License : Open Font License
+https://github.com/floriankarsten/montagu-slab
+
+REM
+License : Open Font License
+https://github.com/octaviopardo/REM
