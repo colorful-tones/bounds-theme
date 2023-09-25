@@ -3,7 +3,7 @@ Contributors: colorful-tones
 Requires at least: 6.0
 Tested up to: 6.3
 Requires PHP: 5.7
-Stable tag: 0.0.2
+Stable tag: 0.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,6 +12,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Create your next slide deck with Bounds, a WordPress theme with scroll snapping. 
 
 == Changelog ==
+
+= 0.0.3 =
+* Add font license reference in readme.txt
+* Update the Code pattern spacing and border
 
 = 0.0.2 =
 * Initial release
