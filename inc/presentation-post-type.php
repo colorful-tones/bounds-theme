@@ -54,11 +54,19 @@ function bounds_register_presentation_post_type() {
 		'template'            => array(
 			array(
 				'bounds/presentation',
-				array(),
+				array(
+					'align' => 'full',
+				),
 				array(
 					array(
-						'bounds/slide',
-						array(),
+						'core/cover',
+						array(
+							'dimRatio' => '0',
+							'isDark'   => false,
+							'metadata' => array(
+								'name' => 'Slide 1',
+							),
+						),
 						array(
 							array(
 								'core/image',
@@ -67,8 +75,14 @@ function bounds_register_presentation_post_type() {
 						)
 					),
 					array(
-						'bounds/slide',
-						array(),
+						'core/cover',
+						array(
+							'dimRatio' => '0',
+							'isDark'   => false,
+							'metadata' => array(
+								'name' => 'Slide 2',
+							),
+						),
 						array(
 							array(
 								'core/paragraph',
