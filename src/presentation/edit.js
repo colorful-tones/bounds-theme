@@ -13,6 +13,11 @@ import {
 } from '@wordpress/components';
 import { __ } from '@wordpress/i18n';
 
+import {
+	ALLOWED_BLOCKS,
+	INNER_BLOCKS_TEMPLATE,
+} from './constants';
+
 /**
  * The edit function describes the structure of your block in the context of the
  * editor. This represents what the editor will render when the block is used.
@@ -30,7 +35,10 @@ export default function Edit( {
 	const blockProps = useBlockProps();
 	const innerBlockProps = useInnerBlocksProps(
 		{ className: 'slider-container' },
-		{ allowedBlocks: [ 'core/cover' ] }
+		{ 
+			allowedBlocks: { ALLOWED_BLOCKS },
+			template: INNER_BLOCKS_TEMPLATE,
+		},
 	);
 	return (
 		<div { ...blockProps }>

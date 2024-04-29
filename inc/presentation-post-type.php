@@ -57,42 +57,6 @@ function bounds_register_presentation_post_type() {
 				array(
 					'align' => 'full',
 				),
-				array(
-					array(
-						'core/cover',
-						array(
-							'dimRatio' => '0',
-							'isDark'   => false,
-							'metadata' => array(
-								'name' => 'Slide 1',
-							),
-						),
-						array(
-							array(
-								'core/image',
-								array(),
-							),
-						)
-					),
-					array(
-						'core/cover',
-						array(
-							'dimRatio' => '0',
-							'isDark'   => false,
-							'metadata' => array(
-								'name' => 'Slide 2',
-							),
-						),
-						array(
-							array(
-								'core/paragraph',
-								array(
-									'placeholder' => 'Add some slide text',
-								),
-							),
-						),
-					),
-				),
 			),
 		),
 	);
