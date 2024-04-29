@@ -69,14 +69,6 @@ const { state, actions, callbacks } = store( 'presentation', {
 					actions.startPresentation();
 					break;
 				}
-				case 'n': {
-					window.open(
-						window.location + '?notes=true',
-						'notes',
-						'height=200,width=200'
-					);
-					break;
-				}
 			}
 		},
 		onFullScreenChange: ( e ) => {
