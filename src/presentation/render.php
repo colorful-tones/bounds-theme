@@ -11,13 +11,15 @@
  */
 
 ?>
-<div <?php echo wp_kses_data( get_block_wrapper_attributes() ); ?>
+<div
+	<?php echo wp_kses_data( get_block_wrapper_attributes() ); ?>
 	data-wp-interactive='presentation'
 	data-wp-on-document--keydown="actions.onKeyDown"
 	data-wp-on-document--fullscreenchange="actions.onFullScreenChange"
 	data-wp-init="callbacks.initSlideShow"
 >
 	<div
+		aria-live="polite"
 		class="slider-container"
 		data-wp-style--transform="state.currentPos"
 		data-wp-on--touchstart="actions.onTouchStart"
