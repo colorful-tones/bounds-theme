@@ -43,14 +43,22 @@ export default function Edit( {
 	return (
 		<div { ...blockProps }>
 			<div { ...innerBlockProps }></div>
-			<div className="buttons">
-				<button aria-label="go to previous slide">
+			<div className="presentation-navigation">
+				<button
+					aria-label="go to previous slide"
+					className="presentation-navigation__button"
+				>
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="presentation-icon presentation-icon--arrow-left">
 						<path d="m12 19-7-7 7-7M19 12H5" />
 					</svg>
 				</button>
-				<p data-wp-text="state.imageIndex">1/10</p>
-				<button aria-label="go to next slide">
+
+				<p className="presentation-slide-count" data-wp-text="state.imageIndex">1/10</p>
+
+				<button
+					aria-label="go to next slide"
+					className="presentation-navigation__button"
+				>
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="presentation-icon presentation-icon--arrow-right" viewBox="0 0 24 24">
 						<path d="M5 12h14M12 5l7 7-7 7" />
 					</svg>
