@@ -1,6 +1,15 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
-	"version": 2,
+	"version": 3,
+	"customTemplates": [
+		{
+			"name": "single-presentation",
+			"postTypes": [
+				"presentation"
+			],
+			"title": "Single: Presentation"
+		}
+	],
 	"settings": {
 		"appearanceTools": true,
 		"color": {

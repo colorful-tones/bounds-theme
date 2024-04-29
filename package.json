@@ -1,0 +1,21 @@
+{
+  "name": "bounds",
+  "version": "0.0.3",
+  "description": "WordPress theme for presentations.",
+  "scripts": {
+    "build": "wp-scripts build --webpack-copy-php --experimental-modules",
+    "check-engines": "wp-scripts check-engines",
+    "check-licenses": "wp-scripts check-licenses",
+    "lint:css": "wp-scripts lint-style",
+    "lint:js": "wp-scripts lint-js",
+    "packages-update": "wp-scripts packages-update",
+    "start": "wp-scripts start --webpack-copy-php --experimental-modules"
+  },
+  "author": "Damon Cook",
+  "devDependencies": {
+    "@wordpress/scripts": "^27.7.0"
+  },
+  "dependencies": {
+    "@wordpress/interactivity": "^5.5.0"
+  }
+}

@@ -1,0 +1,41 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-bounds-presentation {
+	display: block;
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+}
+
+.slider-container {
+	display: flex;
+	position: relative;
+	transition-property: transform;
+	transition-timing-function: var(--slider-container-transition-timing-function, initial);
+	z-index: 1;
+}
+
+.buttons {
+	margin-top: 1rem;
+	padding: 0 1rem;
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+}
+
+.buttons button {
+	transition: scale .2s ease-in;
+	background: none;
+	border: none;
+	cursor: pointer;
+	font-size: 2rem;
+}
+
+.buttons button:hover:not(:disabled) {
+	scale: (1.2);
+}

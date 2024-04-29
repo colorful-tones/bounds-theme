@@ -1,0 +1,9 @@
+.wp-block-bounds-slide {
+	display: block;
+	flex-shrink: 0;
+	transition-property: transform;
+}
+
+.wp-block-bounds-slide.is-presenting {
+	overflow: visible;
+}
