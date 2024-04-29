@@ -26,8 +26,16 @@
 		<?php echo wp_kses_post( $content ); ?>
 	</div>
 	<div class="buttons" data-wp-bind--hidden="state.isPresenting">
-		<button data-wp-on--click="actions.prevSlide" data-wp-bind--disabled="state.noPrevSlide" aria-label="go to previous slide">&lt;</button>
+		<button data-wp-on--click="actions.prevSlide" data-wp-bind--disabled="state.noPrevSlide" aria-label="go to previous slide">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="presentation-icon presentation-icon--arrow-left">
+				<path d="m12 19-7-7 7-7M19 12H5" />
+			</svg>
+		</button>
 		<p class="slide-counter" data-wp-text="state.imageIndex"></p>
-		<button data-wp-on--click="actions.nextSlide"data-wp-bind--disabled="state.noNextSlide" aria-label="go to next slide">&gt;</button>
+		<button data-wp-on--click="actions.nextSlide" data-wp-bind--disabled="state.noNextSlide" aria-label="go to next slide">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="presentation-icon presentation-icon--arrow-right" viewBox="0 0 24 24">
+				<path d="M5 12h14M12 5l7 7-7 7" />
+			</svg>
+		</button>
 	</div>
 </div>
