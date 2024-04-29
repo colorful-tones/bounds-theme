@@ -1,11 +1,15 @@
-.wp-block-bounds-slide {
+.wp-block-bounds-presentation {
+	display: block;
+	overflow: hidden;
+	position: relative;
+	touch-action: pan-y;
+	z-index: 1;
+}
+
+.wp-block-bounds-presentation .slider-container > * {
 	display: block;
 	flex-shrink: 0;
 	transition-property: transform;
-}
-
-.wp-block-bounds-slide.is-presenting {
-	overflow: visible;
 }
 
 .slider-container {
@@ -14,4 +18,10 @@
 	transition-property: transform;
 	transition-timing-function: var(--slider-container-transition-timing-function, initial);
 	z-index: 1;
+}
+
+.presentation-navigation {
+	bottom: 1vh;
+	position: absolute;
+	z-index: 2;
 }

@@ -6,36 +6,47 @@
  */
 
 .wp-block-bounds-presentation {
-	display: block;
 	overflow: hidden;
+}
+
+.wp-block-bounds-presentation .slider-container {
 	position: relative;
-	z-index: 1;
+	width: 100%;
 }
 
 .slider-container {
-	overflow: hidden;
+	display: flex;
+	height: 100%;
 	position: relative;
+	transform: translate3d(0, 0, 0);
+	transition-delay: 0ms;
+	transition-duration: 0.5s;
+	transition-property: transform;
+	transition-timing-function: var(--bounds-transition-timing-function, initial);
 	width: 100%;
 	z-index: 1;
 }
 
+[data-wp-interactive="presentation"] {
+	flex-shrink: 0;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	height: 100%;
+	position: relative;
+	transform: translateZ(0);
+	transition-property: transform;
+	width: 100%;
+	z-index: 1;
+}
 
-.buttons {
-	margin-top: 1rem;
-	padding: 0 1rem;
+.presentation-navigation {
 	display: flex;
 	justify-content: space-between;
-	position: relative;
+	margin-top: 1rem;
+	padding: 0 1rem;
 }
 
-.buttons button {
-	transition: scale .2s ease-in;
-	background: none;
+.presentation-navigation__button {
+	background-color: transparent;
 	border: none;
-	cursor: pointer;
-	font-size: 2rem;
-}
-
-.buttons button:hover:not(:disabled) {
-	scale: (1.2);
 }
