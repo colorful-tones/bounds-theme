@@ -142,10 +142,8 @@ add_filter( 'body_class', 'bounds_body_classes' );
  */
 function bounds_register_block_types() {
 	register_block_type( get_stylesheet_directory() . '/build/presentation' );
-	register_block_type( get_stylesheet_directory() . '/build/slide' );
 }
 add_action( 'init', 'bounds_register_block_types' );
-
 
 /**
  * Filter the render_block to add the needed directives to the inner cover blocks.
