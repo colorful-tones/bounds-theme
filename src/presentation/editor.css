@@ -4,10 +4,12 @@
  * Replace them with your own styles or remove the file completely.
  */
 
-.wp-block-presentations-presentation {
+.wp-block-bounds-presentation {
 	overflow: visible;
+}
 
-	.slider-container {
-		display: block;
-	}
+.wp-block-bounds-presentation .slider-container {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
 }

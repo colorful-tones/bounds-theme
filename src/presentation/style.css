@@ -13,12 +13,12 @@
 }
 
 .slider-container {
-	display: flex;
+	overflow: hidden;
 	position: relative;
-	transition-property: transform;
-	transition-timing-function: var(--slider-container-transition-timing-function, initial);
+	width: 100%;
 	z-index: 1;
 }
+
 
 .buttons {
 	margin-top: 1rem;

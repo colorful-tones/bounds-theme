@@ -7,3 +7,11 @@
 .wp-block-bounds-slide.is-presenting {
 	overflow: visible;
 }
+
+.slider-container {
+	display: flex;
+	position: relative;
+	transition-property: transform;
+	transition-timing-function: var(--slider-container-transition-timing-function, initial);
+	z-index: 1;
+}
