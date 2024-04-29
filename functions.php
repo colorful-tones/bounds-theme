@@ -151,7 +151,7 @@ add_action( 'init', 'bounds_register_block_types' );
  * @param string $block_content The content being rendered by the block.
  */
 function bounds_add_directives_to_inner_blocks( $block_content, $block ) {
-	$allowed_blocks = array( 'wp-block-bounds-slide' );
+	$allowed_blocks = array( 'core/cover' );
 	$slides         = new \WP_HTML_Tag_Processor( $block_content );
 	$total_slides   = 0;
 

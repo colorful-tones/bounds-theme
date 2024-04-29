@@ -30,7 +30,7 @@ export default function Edit( {
 	const blockProps = useBlockProps();
 	const innerBlockProps = useInnerBlocksProps(
 		{ className: 'slider-container' },
-		{ allowedBlocks: [ 'bounds/slide' ] }
+		{ allowedBlocks: [ 'core/cover' ] }
 	);
 	return (
 		<div { ...blockProps }>
