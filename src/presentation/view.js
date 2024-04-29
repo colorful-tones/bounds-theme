@@ -102,16 +102,10 @@ const { state, actions, callbacks } = store( 'presentation', {
 	callbacks: {
 		initSlideShow: () => {
 			const ctx = getContext();
-			if ( ctx.autoplay ) {
-				const int = setInterval(
-					withScope( () => {
-						actions.nextImage();
-					} ),
-					state.transitionsSpeed
-				);
-				// The returned function executes when the element is removed from the DOM.
-				return () => clearInterval( int );
-			}
+			if ( ! ctx.autoplay ) return;
+			interval( () => {
+				actions.nextImage();
+			}, state.transitionsSpeed );
 		},
 		initSlide: () => {
 			const ctx = getContext();
@@ -127,6 +121,27 @@ const { state, actions, callbacks } = store( 'presentation', {
 		},
 	},
 } );
+
+/**
+ * Helper for a more performant setInterval.
+ *
+ * @param {function} callback
+ * @param {number} interval
+ * @returns
+ */
+const interval = ( callback, interval ) => {
+	let start = null;
+	const update = withScope( ( timestamp ) => {
+		if ( ! start ) start = timestamp;
+		const elapsedTime = timestamp - start;
+		if ( elapsedTime > interval ) {
+			callback();
+			start = null;
+		}
+		requestAnimationFrame( update );
+	} );
+	requestAnimationFrame( update );
+};
 
 /**
  * Helper to log the data in a readable format. Useful for debugging parts of the store.
