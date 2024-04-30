@@ -152,7 +152,7 @@ add_action( 'init', 'bounds_register_block_types' );
  */
 function bounds_add_directives_to_inner_blocks( $block_content, $block ) {
 	$allowed_blocks = array( 'wp-block-cover' );
-	$slides         = new \WP_HTML_Tag_Processor( $block_content );
+	$slides         = new WP_HTML_Tag_Processor( $block_content );
 	$total_slides   = 0;
 
 	// Get the main element.
