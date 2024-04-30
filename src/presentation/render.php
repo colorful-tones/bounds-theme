@@ -25,7 +25,7 @@
 		data-wp-on--touchstart="actions.onTouchStart"
 		data-wp-on--touchend="actions.onTouchEnd"
 	>
-		<?php echo wp_kses_post( $content ); ?>
+		<?php echo wp_kses( $content, bounds_kses_extended_ruleset() ); ?>
 	</div>
 
 	<div class="presentation-navigation" data-wp-bind--hidden="state.isPresenting">

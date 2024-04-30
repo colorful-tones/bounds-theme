@@ -211,3 +211,35 @@ function bounds_add_directives_to_inner_blocks( $block_content, $block ) {
 	return $block_content;
 }
 add_filter( 'render_block_bounds/presentation', 'bounds_add_directives_to_inner_blocks', 10, 2 );
+
+/**
+ * Allow SVG in post content.
+ *
+ * We want inner blocks in the presentation block to be able to render SVGs.
+ *
+ * @param  string $svg SVG markup to sanitize.
+ * @return string   Sanitized markup.
+ */
+function bounds_kses_extended_ruleset() {
+	$kses_defaults = wp_kses_allowed_html( 'post' );
+
+	$svg_args = array(
+		'svg'   => array(
+			'class'           => true,
+			'aria-hidden'     => true,
+			'aria-labelledby' => true,
+			'role'            => true,
+			'xmlns'           => true,
+			'width'           => true,
+			'height'          => true,
+			'viewbox'         => true, // <= Must be lower case!
+		),
+		'g'     => array( 'fill' => true ),
+		'title' => array( 'title' => true ),
+		'path'  => array(
+			'd'    => true,
+			'fill' => true,
+		),
+	);
+	return array_merge( $kses_defaults, $svg_args );
+}
