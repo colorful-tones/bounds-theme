@@ -25,5 +25,5 @@
 	"style": "file:./style-index.css",
 	"render": "file:./render.php",
 	"viewScriptModule": "file:./view.js",
-	"viewStyle": [ "file:./view.css" ]
+	"viewStyle": "file:./view.css"
 }

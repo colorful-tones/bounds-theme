@@ -8,7 +8,9 @@ import {
 	withScope,
 } from '@wordpress/interactivity';
 
-const { state, actions, callbacks } = store( 'presentation', {
+import './view.css';
+
+const { state, actions } = store( 'presentation', {
 	state: {
 		get isPresenting() {
 			return state.presenting;
