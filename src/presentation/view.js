@@ -25,7 +25,7 @@ const { state, actions } = store( 'presentation', {
 		},
 		get currentPos() {
 			const ctx = getContext();
-			return `translateX(-${ ( ctx.currentSlide - 1 ) * 100 }%)`;
+			return `translate3d(-${ ( ctx.currentSlide - 1 ) * 100 }%, 0, 0)`;
 		},
 		get slideIndex() {
 			const ctx = getContext();

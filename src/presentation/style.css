@@ -27,11 +27,19 @@
 	z-index: 1;
 }
 
+.wp-block-cover.is-presenting > [class*="wp-block-"] {
+	height: 100vh;
+	width: 100vw;
+}
+
+.wp-block-cover.is-presenting > .wp-block-cover__inner-container > .is-vertical.is-content-justification-stretch {
+	height: 100vh;
+}
+
 [data-wp-interactive="presentation"] {
 	flex-shrink: 0;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
-	height: 100%;
 	position: relative;
 	transform: translateZ(0);
 	transition-property: transform;

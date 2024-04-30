@@ -4,4 +4,12 @@
  * Replace them with your own styles or remove the file completely.
  */
 
+.slider-container {
+	flex-basis: 100%;
+	flex-wrap: wrap;
+	height: auto;
+}
 
+.slider-container > * {
+	width: 100%;
+}
