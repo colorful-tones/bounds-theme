@@ -14,7 +14,116 @@ Text Domain: bounds
 Tags: block-patterns, custom-colors, full-site-editing, rtl-language-support, translation-ready, two-columns, wide-blocks
 */
 
+
 .single-presentation .wp-site-blocks > * {
 	margin: 0;
 	width: 100%;
+}
+
+.marquee {
+	--gap: 1rem;
+	position: relative !important;
+	display: flex !important;
+	user-select: none !important;
+	gap: var(--gap) !important;
+	filter:invert(50%) opacity(15%);
+	white-space:nowrap !important;
+	margin-left: -2vw;
+}
+
+.marquee-content {
+	flex-shrink: 0 !important;
+	display: flex !important;
+	justify-content: space-around !important;
+	gap: var(--gap) !important;
+	animation: scroll 60s linear infinite;
+}
+
+.marquee .wp-block-site-title {
+	font-size: 25vw !important;
+	font-style: italic !important;
+	font-weight: 900 !important;
+	letter-spacing:-0.75vw !important;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+/**
+ * Start pre-1.0 styles for pseudo-slides.
+ */
+:where(.is-style-slide) {
+	counter-increment: slides;
+}
+
+:where(.is-style-slide)::before {
+	background: color-mix(in lab, var(--wp--custom--slide-number--color--background), white);
+	border-radius: 50%;
+	bottom: var(--wp--preset--spacing--20);
+	color: var(--wp--custom--slide-number--color--text);
+	content: counter(slides);
+	display: grid;
+	font-size: var(--wp--preset--font-size--x-small);
+	font-weight: 300;
+	height: calc(1.5 * var(--wp--preset--font-size--x-small));
+	left: calc(50% - 0.75 * var(--wp--preset--font-size--x-small));
+	line-height: 1;
+	place-content: center;
+	position: absolute;
+	width: calc(1.5 * var(--wp--preset--font-size--x-small));
+	z-index: 5;
+}
+
+@media screen and (min-width: 120ch) {
+
+	.is-style-variation-default .entry-content,
+	.is-style-variation-default .wp-site-blocks {
+		height: calc(100vh - var(--wp--custom--wp-admin-bar));
+		overflow-x: hidden;
+		overflow-y: auto;
+		scroll-snap-type: y mandatory;
+		width: 100vw;
+	}
+
+	:where(.is-style-slide) {
+		height: 100%;
+		margin-block-start: 0;
+		scroll-snap-align: start;
+		scroll-snap-stop: always;
+		width: 100vw;
+	}
+
+	/* Horizontal variation */
+	.is-style-variation-horizontal .entry-content,
+	.is-style-variation-horizontal .wp-site-blocks {
+		display: flex;
+		height: 100vh;
+		min-height: 98vh;
+		overflow-x: auto;
+		overflow-y: hidden;
+		scroll-snap-type: x mandatory;
+	}
+
+	.is-style-variation-horizontal .entry-content .wp-block-cover,
+	.is-style-variation-horizontal .wp-site-blocks .wp-block-cover {
+		flex-shrink: 0;
+	}
+
+}
+
+/* Remove some 100vh on smaller screens */
+@media screen and (max-width: 120ch) {
+	:where(.is-style-slide) {
+		border-bottom: 1px dashed color-mix(in lab, var(--wp--custom--slide-number--color--background), white);
+	}
+
+	:where(.is-style-slide .wp-block-group[style*="min-height"]) {
+		min-height: 80vh !important;
+	}
 }
