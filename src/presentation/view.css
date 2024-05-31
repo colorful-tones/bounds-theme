@@ -1,0 +1,26 @@
+/**
+ * The following styles get applied only on final render.
+ */
+.wp-block-bounds-presentation,
+.slider-container {
+	height: 100%;
+}
+
+.slider-container > * {
+	max-height: 100vh;
+	overflow: hidden scroll;
+}
+
+ .presentation-navigation {
+	bottom: 0;
+	position: absolute;
+	z-index: 1000;
+}
+
+.presentation-navigation[hidden] {
+	visibility: hidden;
+}
+
+.wp-block-bounds-presentation:fullscreen {
+	background-color: var(--wp--preset--color--base);
+}

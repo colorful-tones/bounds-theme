@@ -11,5 +11,6 @@
 }
 
 .slider-container > * {
+	border-bottom: 1px dashed var(--wp-admin-theme-color);
 	width: 100%;
 }
