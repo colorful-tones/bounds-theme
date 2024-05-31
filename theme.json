@@ -13,9 +13,9 @@
 	"settings": {
 		"appearanceTools": true,
 		"color": {
-			"defaultPalette": false,
 			"defaultDuotone": true,
 			"defaultGradients": false,
+			"defaultPalette": false,
 			"palette": [
 				{
 					"color": "#f9f9f9",
