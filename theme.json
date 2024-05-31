@@ -132,14 +132,16 @@
 					"fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif",
 					"name": "System Font",
 					"slug": "system-font"
-				},				{
+				},
+				{
 					"fontFace": [
 						{
 							"fontDisplay": "swap",
 							"fontFamily": "Commissioner",
 							"fontStyle": "auto",
 							"fontWeight": "100 900",
-							"src": [								"file:./assets/fonts/Commissioner/Commissioner-VariableFont_FLAR,VOLM,slnt,wght.woff2"
+							"src": [
+								"file:./assets/fonts/Commissioner/Commissioner-VariableFont_FLAR,VOLM,slnt,wght.woff2"
 							]
 						}
 					],
@@ -147,9 +149,6 @@
 					"slug": "commissioner"
 				},
 				{
-					"fontFamily": "Inter, sans-serif",
-					"name": "Inter",
-					"slug": "inter",
 					"fontFace": [
 						{
 							"fontDisplay": "swap",
@@ -161,15 +160,17 @@
 								"file:./assets/fonts/Inter/Inter-VariableFont_slnt,wght.woff2"
 							]
 						}
-					]
+					],
+					"fontFamily": "Inter, sans-serif",
+					"name": "Inter",
+					"slug": "inter"
 				},
 				{
 					"fontFamily": "monospace",
 					"name": "Monospace",
 					"slug": "monospace"
 				},
-				{
-					"fontFace": [
+				{					"fontFace": [
 						{
 							"fontDisplay": "swap",
 							"fontFamily": "Montagu Slab",
