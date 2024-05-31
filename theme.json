@@ -51,15 +51,15 @@
 		},
 		"custom": {
 			"fontWeight": {
-				"thin": 100,
-				"extra-light": 200,
-				"light": 300,
-				"regular": 400,
-				"medium": 500,
-				"semi-bold": 600,
+				"black": 900,
 				"bold": 700,
 				"extra-bold": 800,
-				"black": 900
+				"extra-light": 200,
+				"light": 300,
+				"medium": 500,
+				"regular": 400,
+				"semi-bold": 600,
+				"thin": 100
 			},
 			"slideNumber": {
 				"color": {
@@ -123,8 +123,7 @@
 					"fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif",
 					"name": "System Font",
 					"slug": "system-font"
-				},
-				{
+				},				{
 					"fontFace": [
 						{
 							"fontDisplay": "swap",
