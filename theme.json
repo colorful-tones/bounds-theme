@@ -75,36 +75,45 @@
 			"wideSize": "86vw"
 		},
 		"spacing": {
+			"customSpacingSize": true,
+			"spacingScale": {
+				"steps": 0
+			},
 			"spacingSizes": [
 				{
-					"name": "1",
-					"size": "min(1rem, 1vw)",
-					"slug": "10"
-				},
-				{
-					"name": "2",
-					"size": "min(1.5rem, 2vw)",
+					"name": "2X-Small",
+					"size": "clamp(0.4375rem, 0.2188rem + 1.0938cqi, 1.3125rem)",
 					"slug": "20"
 				},
 				{
-					"name": "3",
-					"size": "min(2.5rem, 3vw)",
+					"name": "X-Small",
+					"size": "clamp(0.6875rem, 0.3594rem + 1.6406cqi, 2rem)",
 					"slug": "30"
 				},
 				{
-					"name": "4",
-					"size": "min(4rem, 5vw)",
+					"name": "Small",
+					"size": "clamp(0.875rem, 0.4375rem + 2.1875cqi, 2.625rem)",
 					"slug": "40"
 				},
 				{
-					"name": "5",
-					"size": "min(6.5rem, 8vw)",
+					"name": "Medium",
+					"size": "clamp(1.3125rem, 0.6563rem + 3.2813cqi, 3.9375rem)",
 					"slug": "50"
 				},
 				{
-					"name": "6",
-					"size": "min(10.5rem, 13vw)",
+					"name": "Large",
+					"size": "clamp(1.75rem, 0.875rem + 4.375cqi, 5.25rem)",
 					"slug": "60"
+				},
+				{
+					"name": "X-Large",
+					"size": "clamp(2.625rem, 1.3125rem + 6.5625cqi, 7.875rem)",
+					"slug": "70"
+				},
+				{
+					"name": "2X-Large",
+					"size": "clamp(3.5rem, 1.75rem + 8.75cqi, 10.5rem)",
+					"slug": "80"
 				}
 			],
 			"units": [
@@ -130,8 +139,7 @@
 							"fontFamily": "Commissioner",
 							"fontStyle": "auto",
 							"fontWeight": "100 900",
-							"src": [
-								"file:./assets/fonts/Commissioner/Commissioner-VariableFont_FLAR,VOLM,slnt,wght.woff2"
+							"src": [								"file:./assets/fonts/Commissioner/Commissioner-VariableFont_FLAR,VOLM,slnt,wght.woff2"
 							]
 						}
 					],
