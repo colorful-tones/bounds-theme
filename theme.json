@@ -407,10 +407,6 @@
 				}
 			}
 		},
-		"color": {
-			"background": "var(--wp--preset--color--base)",
-			"text": "var(--wp--preset--color--contrast)"
-		},
 		"css": "body{overflow-x:hidden;}.site-header {backdrop-filter: blur(9px);}\nmark {background-color: transparent;}\n@media (prefers-reduced-motion: reduce) {.marquee__content {animation-play-state: paused !important;}}",
 		"elements": {
 			"button": {
