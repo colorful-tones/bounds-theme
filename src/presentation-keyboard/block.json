@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "bounds/presentation-keyboard",
+	"version": "0.0.1",
+	"title": "Keyboard",
+	"category": "media",
+	"icon": "media-interactive",
+	"description": "Provides keyboard info.",
+	"example": {},
+	"attributes": {},
+	"supports": {
+		"html": false,
+		"interactivity": true,
+		"align": true,
+		"color": {
+			"background": true,
+			"text": true
+		},
+		"multiple": false
+	},
+	"textdomain": "bounds",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

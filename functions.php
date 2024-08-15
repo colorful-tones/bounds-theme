@@ -142,6 +142,7 @@ add_filter( 'body_class', 'bounds_body_classes' );
  */
 function bounds_register_block_types() {
 	register_block_type( get_stylesheet_directory() . '/build/presentation' );
+	register_block_type( get_stylesheet_directory() . '/build/presentation-keyboard' );
 }
 add_action( 'init', 'bounds_register_block_types' );
 

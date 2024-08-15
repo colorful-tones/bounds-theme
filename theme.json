@@ -44,6 +44,61 @@
 					"color": "#d8613c",
 					"name": "Accent / Two",
 					"slug": "accent-2"
+				},
+				{
+					"color": "#cccccc",
+					"name": "punctuation",
+					"slug": "custom-punctuation"
+				},
+				{
+					"color": "#e2777a",
+					"name": "tag / attr-name",
+					"slug": "custom-tag-attr-name"
+				},
+				{
+					"color": "#7ec699",
+					"name": "attr-value",
+					"slug": "custom-attr-value"
+				},
+				{
+					"color": "#b7b7b7",
+					"name": "comment",
+					"slug": "custom-comment"
+				},
+				{
+					"color": "#cc99cd",
+					"name": "keyword",
+					"slug": "custom-keyword"
+				},
+				{
+					"color": "#f9f9f9",
+					"name": "Base",
+					"slug": "custom-base"
+				},
+				{
+					"color": "#ffffff",
+					"name": "Base / Two",
+					"slug": "custom-base-two"
+				},
+				{
+					"color": "#111111",
+					"name": "Contrast",
+					"slug": "custom-contrast"
+				},
+				{
+					"color": "#636363",
+					"name": "Contrast / Two",
+					"slug": "custom-contrast-two"
+				},
+				{
+					"color": "#586252",
+					"name": "Accent",
+					"slug": "custom-accent"
+				},
+				{
+					"color": "#d8613c",
+					"name": "Accent / Two",
+					"slug": "custom-accent-two"
 				}
 			]
 		},
@@ -125,6 +180,7 @@
 		},
 		"typography": {
 			"customFontSize": true,
+			"defaultFontSizes": false,
 			"dropCap": true,
 			"fluid": true,
 			"fontFamilies": [
@@ -484,6 +540,6 @@
 			"title": "Post Meta"
 		}
 	],
-	"version": 2,
-	"$schema": "https://schemas.wp.org/wp/6.5/theme.json"
+	"version": 3,
+	"$schema": "https://schemas.wp.org/trunk/theme.json"
 }

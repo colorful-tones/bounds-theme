@@ -1,0 +1,16 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.slider-container {
+	flex-basis: 100%;
+	flex-wrap: wrap;
+	height: auto;
+}
+
+.slider-container > * {
+	border-bottom: 1px dashed var(--wp-admin-theme-color);
+	width: 100%;
+}

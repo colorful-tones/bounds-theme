@@ -1,0 +1,17 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.presentation-keyboard {
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+	display: flex;
+	flex-wrap: wrap;
+	left: 1rem;
+	position: fixed;
+	top: 1rem;
+	width: 120px;
+}
